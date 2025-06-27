@@ -641,6 +641,7 @@ const TreeChart = () => {
       <div
         id={chartID_cuting}
         style={{
+          width: chart_width,
           height: "36vh",
           backgroundColor: "rgb(0,0,0,0)",
           color: "white",
@@ -649,6 +650,7 @@ const TreeChart = () => {
       <div
         id={chartID_compen}
         style={{
+          width: chart_width,
           height: "36vh",
           backgroundColor: "rgb(0,0,0,0)",
           color: "white",

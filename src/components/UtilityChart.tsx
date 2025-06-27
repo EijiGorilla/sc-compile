@@ -704,7 +704,7 @@ const UtilityChart = () => {
   });
 
   return (
-    <div>
+    <div style={{ width: chart_width }}>
       <div
         style={{
           color: primaryLabelColor,
