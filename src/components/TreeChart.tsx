@@ -156,7 +156,7 @@ const TreeChart = () => {
         legendValueText: "{valuePercentTotal.formatNumber('#.')}% ({value})",
         radius: am5.percent(45), // outer radius
         innerRadius: am5.percent(28),
-        scale: 2.25,
+        scale: 2,
       })
     );
     pieSeriesRef.current = pieSeries;
@@ -386,7 +386,7 @@ const TreeChart = () => {
         legendValueText: "{valuePercentTotal.formatNumber('#.')}% ({value})",
         radius: am5.percent(45), // outer radius
         innerRadius: am5.percent(28),
-        scale: 2.25,
+        scale: 1.8,
       })
     );
     pieSeriesRef_compen.current = pieSeries;
