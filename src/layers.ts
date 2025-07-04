@@ -2255,19 +2255,17 @@ const colorViaduct = [
   [0, 112, 255, 0.8], // Completed
 ];
 
-function renderViaductLayer() {
-  const renderer = new UniqueValueRenderer({
-    field: "Status",
-  });
-
-  for (var i = 0; i < colorViaduct.length; i++) {
-    renderer.addUniqueValueInfo({
-      value: i + 1,
+const viaduct_renderer = new UniqueValueRenderer({
+  field: "Status",
+  uniqueValueInfos: [
+    {
+      value: 1,
+      label: "To be Constructed",
       symbol: new MeshSymbol3D({
         symbolLayers: [
           new FillSymbol3DLayer({
             material: {
-              color: colorViaduct[i],
+              color: [225, 225, 225, 0.1],
               colorMixMode: "replace",
             },
             edges: new SolidEdges3D({
@@ -2276,10 +2274,26 @@ function renderViaductLayer() {
           }),
         ],
       }),
-    });
-  }
-  viaductLayer.renderer = renderer;
-}
+    },
+    {
+      value: 4,
+      label: "Completed",
+      symbol: new MeshSymbol3D({
+        symbolLayers: [
+          new FillSymbol3DLayer({
+            material: {
+              color: [0, 112, 255, 0.8],
+              colorMixMode: "replace",
+            },
+            edges: new SolidEdges3D({
+              color: [225, 225, 225, 0.3],
+            }),
+          }),
+        ],
+      }),
+    },
+  ],
+});
 
 export const viaductLayer = new SceneLayer({
   portalItem: {
@@ -2293,6 +2307,7 @@ export const viaductLayer = new SceneLayer({
   },
   title: "Viaduct",
   labelsVisible: false,
+  renderer: viaduct_renderer,
   popupTemplate: {
     title: "<p>{PierNumber}</p>",
     lastEditInfoEnabled: false,
@@ -2321,8 +2336,6 @@ export const viaductLayer = new SceneLayer({
     ],
   },
 });
-
-renderViaductLayer();
 
 export const viaductLayerStatus4 = new SceneLayer({
   portalItem: {
