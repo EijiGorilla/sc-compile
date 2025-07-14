@@ -46,6 +46,7 @@ function MapDisplay() {
       arcgisScene.map.add(handedOverLotLayer);
       arcgisScene.map.ground.navigationConstraint = "none";
       arcgisScene.view.environment.atmosphereEnabled = false;
+      arcgisScene.view.environment.starsEnabled = false;
 
       arcgisSearch.sources = [
         {
