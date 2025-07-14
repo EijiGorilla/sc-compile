@@ -37,7 +37,7 @@ export const lotStatusLabel = [
   "For Notice of Taking",
   "With PTE",
   "For Expropriation",
-  "For Harmonization",
+  "Harmonized/For Harmonization",
 ];
 
 export const lotStatusColor = [
