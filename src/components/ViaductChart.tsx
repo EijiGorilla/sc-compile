@@ -7,6 +7,7 @@ import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
 import {
   chart_width,
+  construction_status,
   cutoff_days,
   primaryLabelColor,
   updatedDateCategoryNames,
@@ -200,8 +201,7 @@ const ViaductChart = () => {
       am5.Legend.new(root, {
         centerX: am5.p50,
         centerY: am5.percent(50),
-        x: am5.percent(60),
-        y: am5.percent(97),
+        x: am5.percent(50),
         marginTop: 20,
         scale: 0.8,
         layout: root.horizontalLayout,
@@ -338,8 +338,8 @@ const ViaductChart = () => {
       });
       legend.data.push(series);
     }
-    makeSeries("Complete", "comp");
-    makeSeries("Incomplete", "incomp");
+    makeSeries(construction_status[2], "comp");
+    makeSeries(construction_status[0], "incomp");
     // makeSeries('Delayed', 'delay');
     chart.appear(1000, 100);
 

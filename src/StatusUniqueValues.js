@@ -1,3 +1,9 @@
+export const construction_status = [
+  "To be Constructed",
+  "Under Construction",
+  "Completed",
+];
+
 // chart width
 export const chart_width = "26vw";
 
