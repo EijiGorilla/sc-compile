@@ -183,7 +183,20 @@ export const prowLayer = new FeatureLayer({
   popupEnabled: false,
   renderer: prowRenderer,
 });
-prowLayer.listMode = "hide";
+
+/* Meralco site 1 additioinal PROW Layer */
+
+export const meralco_site1_prowLayer = new FeatureLayer({
+  portalItem: {
+    id: "87ec32eacf194b91b040ca052574234b",
+    portal: {
+      url: "https://gis.railway-sector.com/portal",
+    },
+  },
+  title: "Meralco Site 1 Additional PROW",
+  popupEnabled: false,
+  renderer: prowRenderer,
+});
 
 /*------- NGCP Layers ---------- */
 /* NGCP Working Area */
@@ -2379,6 +2392,8 @@ export const alignmentGroupLayer = new GroupLayer({
     pierHeadColumnLayer,
     chainageLayer,
     cp_break_lines,
+    meralco_site1_prowLayer,
+    prowLayer,
   ],
 });
 

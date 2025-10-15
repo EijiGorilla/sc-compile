@@ -58,7 +58,7 @@ function MapDisplay() {
       arcgisScene.map.add(structureLayer);
       arcgisScene.map.add(nloLoOccupancyGroupLayer);
       arcgisScene.map.add(alignmentGroupLayer);
-      arcgisScene.map.add(prowLayer);
+      // arcgisScene.map.add(prowLayer);
       arcgisScene.map.add(handedOverLotLayer);
       arcgisScene.map.ground.navigationConstraint = "none";
       arcgisScene.view.environment.atmosphereEnabled = false;
